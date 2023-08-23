@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Products;
 use App\Entity\Trait\SlugTrait;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\CategoriesRepository;

@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+
+use App\Entity\Categories;
 use Doctrine\DBAL\Types\Types;
 use App\Entity\Trait\SlugTrait;
 use Doctrine\ORM\Mapping as ORM;
@@ -36,7 +38,7 @@ class Products
 
     #[ORM\ManyToOne(inversedBy: 'products')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?categories $categories = null;
+    private ?Categories $categories = null;
 
     #[ORM\OneToMany(mappedBy: 'products', targetEntity: Images::class, orphanRemoval: true)]
     private Collection $images;
