@@ -5,255 +5,227 @@
 
 {% block body %}
 	<p>Accueil</p>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
 
 </head>
-	<header>
+<header>
 
-		<div>
+	<div>
+		<div id="testcomp"></div>
+	
+	<!-- Demo styles -->
+	<style>
+		html,
+		body {
+			position: relative;
+			height: 100%;
+		}
 
-			<img src="images/Marie4.jpg" alt="...">
+		body {
+			background: #eee;
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color: #000;
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			position: relative;
+		}
+		button {
+			position: absolute;
+			margin-top: 3rem;
+
+		}
+
+		.swiper {
+			width: 100%;
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		.swiper-slide {
+			background-position: center;
+			background-size: cover;
+			width: 300px;
+			height: 300px;
+		}
+
+		.swiper-slide img {
+			display: block;
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+
+	<section class="stylist">
+		<div class="textstyle">
+			<h2>Hairstylist</h2>
+			Cette collection de vêtements uniquement confectionnées mains réalisées avec des cheveux
+							 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae ab reiciendis, 
+							 dignissimos quam tempore quaerat? Impedit facilis eos omnis at.
 		</div>
-		<!-- Demo styles -->
-		<style>
-			html,
-			body {
-				position: relative;
-				height: 100%;
-			}
-
-			body {
-				background: #eee;
-				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-				font-size: 14px;
-				color: #000;
-				margin: 0;
-				padding: 0;
-			}
-			img {
-				position: relative;
-			}
-			button {
-				position: absolute;
-				margin-top: 3rem;
-
-			}
-
-			.swiper {
-				width: 100%;
-				padding-top: 50px;
-				padding-bottom: 50px;
-			}
-
-			.swiper-slide {
-				background-position: center;
-				background-size: cover;
-				width: 300px;
-				height: 300px;
-			}
-
-			.swiper-slide img {
-				display: block;
-				width: 100%;
-			}
-		</style>
-	</head>
-
-	<body>
-		<section class="stylist">
-			<div class="textstyle">
-				<h2>Hairstylist</h2>
-				Cette collection de vêtements uniquement confectionnées mains réalisées avec des cheveux
-				 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae ab reiciendis, 
-				 dignissimos quam tempore quaerat? Impedit facilis eos omnis at.
-			</div>
-			<div class="photostyle">
-				<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img src="images/mariewu3.jpg" class="d-block w-100" alt="...">
-						</div>
-						<div class="carousel-item">
-							<img src="images/mariewu1.jpg" class="d-block w-100" alt="...">
-						</div>
-						<div class="carousel-item">
-							<img src="images/mariewu4.jpg" class="d-block w-100" alt="...">
-						</div>
+		<div class="photostyle">
+			<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="images/mariewu3.jpg" class="d-block w-100" alt="...">
 					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
+					<div class="carousel-item">
+						<img src="images/mariewu1.jpg" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="images/mariewu4.jpg" class="d-block w-100" alt="...">
+					</div>
 				</div>
-			</div>
-		</section>
-		<!-- Swiper -->
-		<div class="swiper mySwiper">
-
-			<div class="swiper-wrapper">
-				<div class="text fixed">
-					<h2>Coiffure artistique</h2>
-					<p>Il m'a fallut de longues heures de tissages , de tressages pour confectionner ces ajouts capillaires
-					</p>
-				</div>
-				<div class="swiper-slide">
-					<img src="images/Zoe.jpg"/>
-				</div>
-				<div class="swiper-slide">
-					<img src="images/Robin.jpg"/>
-				</div>
-				<div class="swiper-slide">
-					<img src="images/paola.jpg"/>
-				</div>
-				<div class="swiper-slide">
-					<img src="images/Barbara.jpg"/>
-					<button>click</button>
-				</div>
-				<div class="endtext">
-					<h2>Coiffure artistique</h2>
-					<p>Il m'a fallut de longues heures de tissages , de tressages pour confectionner ces ajouts capillaires
-					</p>
-				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
 			</div>
 		</div>
-		<div class="swiper-pagination"></div>
-	</body>
-</div></body></header><section class="prestations2"><div class="grid2">
-<div class="box7">
-	<h2>Sloane Peters</h2>
-	<img src="images/profile.jpg">
-</div>
-<div class="box8">
-	<h4>« Être parisienne ce n’est pas
-					être née à paris, c’est y renaître »</h4>
+	</section>
+	<!-- Swiper -->
+	<div class="swiper mySwiper">
 
-	<h3>Une coiffeuse à la pointe de la tendance
-	</h3>
-	<li>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magnam facere suscipit mollitia minima laborum.</li>
-	<h3>Lorem, ipsum dolor.</h3>
-	<li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, placeat?</li>
-
-</div>
-<div class="box9">
-	<h3>J'ai créée pour vos cheveux</h3>
-	<li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus necessitatibus ullam consectetur praesentium cupiditate deleniti ipsam est rerum quam mollitia!</li>
-	<h3>Conseils d'experts
-	</h3>
-	<li>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta reiciendis quidem repudiandae, odio voluptatum.</li>
-	<img src="images/produits2.jpg" alt="...">
-</div>
-
-<div class="box10">
-	<img src="images/produits.jpg" alt="">
-</div>
-<div class="presse">
-	<h2>« Presse »</h2>
-	<img src="images/sophie1.jpg" alt="...">
-</div>
-<div class="box11">
-
-
-	<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="images/bitie1.jpg" class="d-block w-100" alt="...">
+		<div class="swiper-wrapper">
+			<div class="text fixed">
+				<h2>Coiffure artistique</h2>
+				<p>Il m'a fallut de longues heures de tissages , de tressages pour confectionner ces ajouts capillaires
+				</p>
 			</div>
-			<div class="carousel-item">
-				<img src="images/bitie2.jpg" class="d-block w-100" alt="...">
+			<div class="swiper-slide">
+				<img src="images/Zoe.jpg"/>
 			</div>
-			<div class="carousel-item">
-				<img src="images/bitie3.jpg" class="d-block w-100" alt="...">
+			<div class="swiper-slide">
+				<img src="images/Robin.jpg"/>
+			</div>
+			<div class="swiper-slide">
+				<img src="images/paola.jpg"/>
+			</div>
+			<div class="swiper-slide">
+				<img src="images/Barbara.jpg"/>
+				<button>click</button>
+			</div>
+			<div class="endtext">
+				<h2>Coiffure artistique</h2>
+				<p>Il m'a fallut de longues heures de tissages , de tressages pour confectionner ces ajouts capillaires
+				</p>
 			</div>
 		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
 	</div>
-</div>
-<div class="box12">
+	<div class="swiper-pagination"></div>
+</body></div></body></header><section class="prestations2"><div class="grid2"><div class="box7">
+<h2>Sloane Peters</h2>
+<img src="images/profile.jpg"></div><div class="box8">
+<h4>« Être parisienne ce n’est pas
+						être née à paris, c’est y renaître »</h4>
 
-	<h4>Bitie Flow
-	</h4>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, beatae.</p>
-	<h4>Pour O Magazine</h4>
-	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, dolor.</p>
-</div>
-<div class="box13">
-	<h4>Color Full</h4>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio facilis, at dolore ducimus similique voluptates.</p>
-	<h4>Pour VOGUE</h4>
-	<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nulla? Architecto ea necessitatibus quaerat molestiae.</p>
-</div>
-<div class="box14">
-	<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="images/Kimberley1.jpg" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="images/Kimberley2.jpg" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="images/Kimberley3.jpg" class="d-block w-100" alt="...">
-			</div>
-			{# <div class="carousel-item">
-							      <img src="images/Kimberley4.jpg" class="d-block w-100" alt="...">
-							    </div> #}
+<h3>Une coiffeuse à la pointe de la tendance
+</h3>
+<li>
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magnam facere suscipit mollitia minima laborum.</li>
+<h3>Lorem, ipsum dolor.</h3>
+<li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, placeat?</li></div><div class="box9">
+<h3>J'ai créée pour vos cheveux</h3>
+<li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus necessitatibus ullam consectetur praesentium cupiditate deleniti ipsam est rerum quam mollitia!</li>
+<h3>Conseils d'experts
+</h3>
+<li>
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta reiciendis quidem repudiandae, odio voluptatum.</li>
+<img src="images/produits2.jpg" alt="..."></div><div class="box10">
+<img src="images/produits.jpg" alt=""></div><div class="presse">
+<h2>« Presse »</h2>
+<img src="images/sophie1.jpg" alt="..."></div><div class="box11">
+
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="images/bitie1.jpg" class="d-block w-100" alt="...">
 		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
-	</div>
-</div>
-<div class="box15">
-	<h4>Monochromatic</h4>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum distinctio nesciunt, a perspiciatis inventore!</p>
-	<h4>Pour Biblond</h4>
-	<p>
-		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, laboriosam dolorem ratione placeat deleniti explicabo.</p>
-</div>
-<div class="box16">
-	<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="images/sophie1.jpg" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="images/sophie2.jpg" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="images/sophie3.jpg" class="d-block w-100" alt="...">
-			</div>
+		<div class="carousel-item">
+			<img src="images/bitie2.jpg" class="d-block w-100" alt="...">
 		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
+		<div class="carousel-item">
+			<img src="images/bitie3.jpg" class="d-block w-100" alt="...">
+		</div>
 	</div>
-</div></div></div></section></body><!-- Swiper JS --><script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script><!-- Initialize Swiper --><script>let swiper = new Swiper(".mySwiper", {
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div></div><div class="box12">
+
+<h4>Bitie Flow
+</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, beatae.</p>
+<h4>Pour O Magazine</h4>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, dolor.</p></div><div class="box13">
+<h4>Color Full</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio facilis, at dolore ducimus similique voluptates.</p>
+<h4>Pour VOGUE</h4>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, nulla? Architecto ea necessitatibus quaerat molestiae.</p></div><div class="box14">
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="images/Kimberley1.jpg" class="d-block w-100" alt="...">
+		</div>
+		<div class="carousel-item">
+			<img src="images/Kimberley2.jpg" class="d-block w-100" alt="...">
+		</div>
+		<div class="carousel-item">
+			<img src="images/Kimberley3.jpg" class="d-block w-100" alt="...">
+		</div>
+
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div></div><div class="box15">
+<h4>Monochromatic</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum distinctio nesciunt, a perspiciatis inventore!</p>
+<h4>Pour Biblond</h4>
+<p>
+	Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, laboriosam dolorem ratione placeat deleniti explicabo.</p></div><div class="box16">
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="images/sophie1.jpg" class="d-block w-100" alt="...">
+		</div>
+		<div class="carousel-item">
+			<img src="images/sophie2.jpg" class="d-block w-100" alt="...">
+		</div>
+		<div class="carousel-item">
+			<img src="images/sophie3.jpg" class="d-block w-100" alt="...">
+		</div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div></div></div></div></section></body><!-- Swiper JS --><script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script><!-- Initialize Swiper --><script>let swiper = new Swiper(".mySwiper", {
 effect: "coverflow",
 grabCursor: true,
 centeredSlides: true,
