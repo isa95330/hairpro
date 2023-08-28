@@ -38,7 +38,7 @@ class Products
 
     #[ORM\ManyToOne(inversedBy: 'products')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Categories $categories = null;
+    private Categories $categories;
 
     #[ORM\OneToMany(mappedBy: 'products', targetEntity: Images::class, orphanRemoval: true)]
     private Collection $images;

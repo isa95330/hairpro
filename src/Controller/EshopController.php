@@ -7,13 +7,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class MainController extends AbstractController
+class EshopController extends AbstractController
 {
-    #[Route('/', name: 'main')]
+    #[Route('/eshop', name: 'eshop')]
     public function index(CategoriesRepository $categoriesRepository): Response
     {
      
-        return $this->render('main/index.html.twig',[
+        return $this->render('E_shop/index.html.twig',[
         'categories' => $categoriesRepository->findBy([] ,
         ['categoryOrder' => 'asc'])
     ]);

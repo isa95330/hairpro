@@ -15,16 +15,13 @@ class CategoriesFixtures extends Fixture
     }
     public function load(ObjectManager $manager): void
     {
-        $parent = $this->createCategory('Shampooings',null , $manager);
+        $parent = $this->createCategory('Produits capillaire',null , $manager);
        
-$this->createCategory('Cheveux sec',$parent, $manager);
-$this->createCategory('Cheveux hydratant',$parent, $manager);
-$this->createCategory('Cheveux gras',$parent, $manager);
+$this->createCategory('Shampooing',$parent, $manager);
+$this->createCategory('Soins hydratant',$parent, $manager);
+$this->createCategory('Coiffant',$parent, $manager);
 
-$parent = $this->createCategory('Soins',null , $manager);
 
-$this->createCategory('Cheveux sec',$parent, $manager);
-$this->createCategory('Cheveux hydratant',$parent, $manager);
 
 
         $manager->flush();

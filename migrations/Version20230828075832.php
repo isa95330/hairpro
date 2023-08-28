@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20230823100523 extends AbstractMigration
+final class Version20230828075832 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -21,6 +21,7 @@ final class Version20230823100523 extends AbstractMigration
     {
         // this up() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE categories DROP FOREIGN KEY FK_3AF34668727ACA70');
+        $this->addSql('ALTER TABLE categories ADD category_order INT NOT NULL');
         $this->addSql('ALTER TABLE categories ADD CONSTRAINT FK_3AF34668727ACA70 FOREIGN KEY (parent_id) REFERENCES categories (id) ON DELETE CASCADE');
     }
 
@@ -28,6 +29,7 @@ final class Version20230823100523 extends AbstractMigration
     {
         // this down() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE categories DROP FOREIGN KEY FK_3AF34668727ACA70');
+        $this->addSql('ALTER TABLE categories DROP category_order');
         $this->addSql('ALTER TABLE categories ADD CONSTRAINT FK_3AF34668727ACA70 FOREIGN KEY (parent_id) REFERENCES categories (id)');
     }
 }
