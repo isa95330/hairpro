@@ -48,6 +48,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 150)]
     private ?string $city = null;
 
+    #[ORM\Column(type:'boolean')]
+    private $isVerified = false;
+
+    #[ORM\Column(type: 'string', length: 100, nullable: true)]
+    private $resetToken;
    
 
     #[ORM\OneToMany(mappedBy: 'users', targetEntity: Orders::class)]
@@ -192,7 +197,31 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-   
+    public function getIsVerified(): ?bool
+    {
+
+        return $this->isVerified;
+    }
+
+    public function setIsVerified(bool $is_verified): self
+    {
+
+        $this-> $is_verified;
+        return $this;
+    }
+
+    public function getResetToken(): ?string
+    {
+
+        return $this->resetToken;
+    }
+
+    public function setResetToken(?string $resetToken): self
+    {
+
+        $this-> resetToken = $resetToken;
+        return $this;
+    }
 
     /**
      * @return Collection<int, Orders>
