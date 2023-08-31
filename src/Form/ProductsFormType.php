@@ -49,17 +49,16 @@ class ProductsFormType extends AbstractType
             ])
             ->add('images', FileType::class, [
                 'label' => false,
-                'multiple' => true,
                 'mapped' => false,
                 'required' => false,
-                'constraints' => [
-                    new All(
-                        new Image([
-                            'maxWidth' => 1280,
-                            'maxWidthMessage' => 'L\'image doit faire {{ max_width }} pixels de large au maximum'
-                        ])
-                    )
-                ]
+                // 'constraints' => [
+                //     new All(
+                //         new Image([
+                //             'maxWidth' => 1280,
+                //             'maxWidthMessage' => 'L\'image doit faire {{ max_width }} pixels de large au maximum'
+                //         ])
+                //     )
+                // ]
             ])
         ;
     }
