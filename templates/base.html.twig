@@ -12,22 +12,20 @@
 
 			<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css') }}">
 			<link rel="stylesheet" href="{{asset('assets/css/styles.css') }}">
-
+		<link rel="{{asset('assets/Components/css/app.css')}}">
+		</link>
 			{{ encore_entry_link_tags('app') }}
 		{% endblock %}
 
 
 		{% block javascripts %}
 			<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}">
-				defer >
+			
 			</script>
 
 			<script src="{{asset('assets/js/script.js')}}">
-				defer >
-			</script>
-			<script src="{{asset('assets/js/script.js')}}">
-				defer >
-			</script>
+		</script>
+		
 			{{ encore_entry_script_tags('app') }}
 		{% endblock %}
 
@@ -45,8 +43,10 @@
 			</div>
 		{% endif %}
 		{% include "_partials/_flash.html.twig" %}
+	
 		{% block body %}{% endblock %}
+		
 		{% include "_partials/_footer.html.twig" %}
-
+	 
 	</body>
 </html>

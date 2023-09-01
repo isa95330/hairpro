@@ -1,5 +1,7 @@
 import React from 'react';
-import './app.css';
+
+import'../css/app.css';
+import'./public/assets/css/styles.css';
 import { useEffect, useRef } from 'react';
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -134,7 +136,8 @@ function TestComp() {
 
   
   return (
-    <div className="App">
+   
+    <div className="TestComp">
       <h1 className="title" ref={titleRef}>
         <span className="letter">H</span>
         <span className="letter">A</span>

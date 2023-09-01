@@ -30,7 +30,7 @@ class OrdersController extends AbstractController
         $order = new Orders();
 
         // On remplit la commande
-        $order->setUsers($this->getUser());
+        $order->setUser($this->getUser());
         $order->setReference(uniqid());
 
         // On parcourt le panier pour créer les détails de commande
@@ -57,6 +57,9 @@ class OrdersController extends AbstractController
         $session->remove('panier');
 
         $this->addFlash('message', 'Commande créée avec succès');
-        return $this->redirectToRoute('main');
+        
+        // return $this->redirectToRoute('orders/orders.html.twig');
     }
+  
+    
 }

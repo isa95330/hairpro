@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\User;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\Trait\CreatedAtTrait;
 use App\Repository\OrdersRepository;
@@ -15,22 +16,21 @@ class Orders
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
-    private ?int $id = null;
+    #[ORM\Column(type: 'integer')]
+    private $id;
 
-    #[ORM\Column(length: 20, unique: true)]
-    private ?string $reference = null;
+    #[ORM\Column(type: 'string', length: 20, unique: true)]
+    private $reference;
 
+    #[ORM\ManyToOne(targetEntity: Coupons::class, inversedBy: 'orders')]
+    private $coupons;
 
-    #[ORM\ManyToOne(inversedBy: 'orders')]
-    private ?Coupons $coupons = null;
-
-    #[ORM\ManyToOne(inversedBy: 'orders')]
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'orders')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?User $users = null;
+    private $user;
 
-    #[ORM\OneToMany(mappedBy: 'orders', targetEntity: OrdersDetails::class, orphanRemoval: true)]
-    private Collection $ordersDetails;
+    #[ORM\OneToMany(mappedBy: 'orders', targetEntity: OrdersDetails::class, orphanRemoval: true, cascade: ['persist'])]
+    private $ordersDetails;
 
     public function __construct()
     {
@@ -48,57 +48,56 @@ class Orders
         return $this->reference;
     }
 
-    public function setReference(string $reference): static
+    public function setReference(string $reference): self
     {
         $this->reference = $reference;
 
         return $this;
     }
 
-
     public function getCoupons(): ?Coupons
     {
         return $this->coupons;
     }
 
-    public function setCoupons(?Coupons $coupons): static
+    public function setCoupons(?Coupons $coupons): self
     {
         $this->coupons = $coupons;
 
         return $this;
     }
 
-    public function getUsers(): ?User
+    public function getUser(): ?User
     {
-        return $this->users;
+        return $this->user;
     }
 
-    public function setUsers(?User $users): static
+    public function setUser(?User $user): self
     {
-        $this->users = $users;
+        $this->user = $user;
 
         return $this;
     }
 
     /**
-     * @return Collection<int, OrdersDetails>
+     * @return Collection|OrdersDetails[]
      */
     public function getOrdersDetails(): Collection
     {
         return $this->ordersDetails;
     }
 
-    public function addOrdersDetail(OrdersDetails $ordersDetail): static
+    public function addOrdersDetail(OrdersDetails $ordersDetail): self
     {
         if (!$this->ordersDetails->contains($ordersDetail)) {
-            $this->ordersDetails->add($ordersDetail);
+            $this->ordersDetails[] = $ordersDetail;
             $ordersDetail->setOrders($this);
         }
 
         return $this;
     }
 
-    public function removeOrdersDetail(OrdersDetails $ordersDetail): static
+    public function removeOrdersDetail(OrdersDetails $ordersDetail): self
     {
         if ($this->ordersDetails->removeElement($ordersDetail)) {
             // set the owning side to null (unless already changed)

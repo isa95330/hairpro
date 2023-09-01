@@ -1,5 +1,6 @@
 .TestComp {
     text-align: center;
+    margin-top:-10rem;
   }
   
   section {
@@ -9,6 +10,7 @@
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
+  
   }
   
   .box {
@@ -32,4 +34,10 @@
   .letter {
     font-size: 15vw;
     display: inline-block;
+  }
+
+  @media screen and (max-width: 767.98px){
+    .TestComp{
+      margin-top:-70rem;
+    }
   }

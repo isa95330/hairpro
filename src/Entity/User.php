@@ -199,17 +199,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function getIsVerified(): ?bool
     {
-
         return $this->isVerified;
     }
 
     public function setIsVerified(bool $is_verified): self
     {
+        $this->isVerified = $is_verified;
 
-        $this-> $is_verified;
         return $this;
     }
-
     public function getResetToken(): ?string
     {
 
@@ -235,7 +233,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         if (!$this->orders->contains($order)) {
             $this->orders->add($order);
-            $order->setUsers($this);
+            $order->setUser($this);
         }
 
         return $this;
@@ -245,8 +243,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         if ($this->orders->removeElement($order)) {
             // set the owning side to null (unless already changed)
-            if ($order->getUsers() === $this) {
-                $order->setUsers(null);
+            if ($order->getUser() === $this) {
+                $order->setUser(null);
             }
         }
 
