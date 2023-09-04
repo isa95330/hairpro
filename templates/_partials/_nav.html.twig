@@ -1,28 +1,41 @@
-<nav class="navbar dark-mode" role="navigation">
-      <div class="navbar__logo"><img src="./IMG/logo-depan.jpg" id="logo"/></div>
-      <ul class="navbar__links">
-        <li class="navbar__link first"><a href="#">Accueil</a></li>
-        <li class="navbar__link second"><a href="#sv">Presse</a></li>
-        <li class="navbar__link third"><a href="#contact">Portfolio</a></li>
-		<li class="navbar__link third"><a href="{{ path('eshop')}}">E-Shop</a></li>
-		  <li class="navbar__link four"><a href="{{ path('app_register')}}">Créer mon compte</a></li>
-		  {% if app.user %}
-        <li class="navbar__link five"><a href="{{ path('app_logout')}}">Déconnexion</a></li>
-			{% else %}
-        <li class="navbar__link six">
-          <a href="{{ path('app_login')}}">Connexion</a>
-        </li>
-		{% endif %}
-      </ul>
-      <button class="burger">
-        <span class="bar"></span>
-      </button>
-    </nav>
-		<form class="d-flex" role="search">
-						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-success" type="submit">Rechercher</button>
-					</form>
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nav</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+<header class="header">
+  <a href="#" class="logo">logo</a>
+<input type="checkbox" id="check">
+  <label for="check" class="icons">
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <i class="bx bx-x"></i>
+  </label>
+
+  <nav class="navbar">
+    <a href="{{ path('main')}}" style="--i:0">Accueil</a>
+    <a href="#" style="--i:1">Porfolio</a>
+    <a href="#" style="--i:2">Publication</a>
+    <a href="{{ path('eshop')}}" style="--i:3">La boutique</a>
+    <a href="{{ path('app_register')}}" style="--i:4">Créer un compte</a>
+	{% if app.user %}
+    <a href="{{ path('app_login')}}" style="--i:5">Connexion</a>
+	{% else %}
+    <a href="{{ path('app_logout')}}" style="--i:6">Déconnexion</a>
+	{% endif %}
+    
+
+  </nav>
+</header>
+ </body>
+</html>
 {# <nav class="navbar navbar-expand-md fixed-top navbar-dark text-bs-dark mb-5" id="nav" aria-label="Main navigation">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="#">Logo</a>
