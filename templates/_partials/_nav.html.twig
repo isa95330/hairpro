@@ -1,93 +1,78 @@
-  {# <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
- <nav class="navbar dark-mode" role="navigation">
-      <div class="navbar__logo"><img src="" id="logo"/></div>
+<nav class="navbar dark-mode" role="navigation">
+      <div class="navbar__logo"><img src="./IMG/logo-depan.jpg" id="logo"/></div>
       <ul class="navbar__links">
-        <!-- <li class="navbar__link first"><a href="#">Accueil</a></li> -->
-        <li class="navbar__link second"><a href="#sv">Services</a></li>
-        <li class="navbar__link third"><a href="#contact">Contact</a></li>
-        <li class="navbar__link four">
-          <a href="#details">Qui sommes nous</a>
+        <li class="navbar__link first"><a href="#">Accueil</a></li>
+        <li class="navbar__link second"><a href="#sv">Presse</a></li>
+        <li class="navbar__link third"><a href="#contact">Portfolio</a></li>
+		<li class="navbar__link third"><a href="{{ path('eshop')}}">E-Shop</a></li>
+		  <li class="navbar__link four"><a href="{{ path('app_register')}}">Créer mon compte</a></li>
+		  {% if app.user %}
+        <li class="navbar__link five"><a href="{{ path('app_logout')}}">Déconnexion</a></li>
+			{% else %}
+        <li class="navbar__link six">
+          <a href="{{ path('app_login')}}">Connexion</a>
         </li>
-		<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">La boutique</a>
-							<ul class="dropdown-menu">
-								<li>
-									<a class="dropdown-item text-dark" href="{{ path('eshop')}}">E-Shop</a>
-								</li>
-								<li>
-									<a class="dropdown-item text-dark" href="{{ path('eshop')}}">Shampooing</a>
-								</li>
-								<li>
-									<a class="dropdown-item text-dark" href="#">Soin hydratant</a>
-								</li>
-								<li>
-									<a class="dropdown-item text-dark" href="#">Coiffant</a>
-								</li>
-								
-							</ul>
+		{% endif %}
       </ul>
       <button class="burger">
         <span class="bar"></span>
       </button>
-    </nav> #}
+    </nav>
+		<form class="d-flex" role="search">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Rechercher</button>
+					</form>
 
-<nav class="navbar navbar-expand-md fixed-top navbar-dark text-bs-dark mb-5" id ="nav" aria-label="Main navigation">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#">Logo</a>
-				<button class="navbar-toggler p-0 border-0 " type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon "></span>
-				</button>
+{# <nav class="navbar navbar-expand-md fixed-top navbar-dark text-bs-dark mb-5" id="nav" aria-label="Main navigation">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">Logo</a>
+		<button class="navbar-toggler p-0 border-0 " type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon "></span>
+		</button>
 
-				<div class="navbar-collapse margin-top: -10rem;" id="navbarsExampleDefault">
-					<ul class="navbar-nav me-auto mb-5 mb-lg-0 ">
-					
-						<li class="nav-item ">
-							<a class="nav-link active text-dark" aria-current="page" href="{{ path('main')}}">Accueil</a>
+		<div class="navbar-collapse margin-top: -10rem;" id="navbarsExampleDefault">
+			<a class="navbar-nav me-auto mb-5 mb-lg-0 ">
+
+				<li class="nav-item ">
+					<a class="nav-link active text-dark" aria-current="page" href="{{ path('main')}}">Accueil</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-dark" href="#">Presse</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-dark" href="">Portfolio</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link text-dark" href="{{ path('app_register')}}">Créer mon compte</a>
+				</li>
+				{% if app.user %}
+					<li class="nav-item">
+						<a class="nav-link text-dark" href="{{ path('app_logout')}}">Déconnexion</a>
+					</li>
+				{% else %}
+					<li class="nav-item">
+						<a class="nav-link text-dark" href="{{ path('app_login')}}">Connexion</a>
+					</li>
+				{% endif %}
+				<a class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">La boutique</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a class="dropdown-item text-dark" href="{{ path('eshop')}}">E-Shop</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link text-dark" href="#">Presse</a>
+
+
+						<li>
+							<a class="dropdown-item text-dark" href="#">Shampoing</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link text-dark" href="">Portfolio</a>
+						<li>
+							<a class="dropdown-item text-dark" href="#">Soin hydratant</a>
 						</li>
-						
-						<li class="nav-item">
-							<a class="nav-link text-dark" href="{{ path('app_register')}}">Créer mon compte</a>
+						<li>
+							<a class="dropdown-item text-dark" href="#">Coiffant</a>
 						</li>
-					{% if app.user %}
-						<li class="nav-item">
-							<a class="nav-link text-dark" href="{{ path('app_logout')}}">Déconnexion</a>
-						</li>
-						{% else %}
-							<li class="nav-item">
-							<a class="nav-link text-dark" href="{{ path('app_login')}}">Connexion</a>
-						</li>
-						{% endif %}
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">La boutique</a>
-							<ul class="dropdown-menu">
-								<li>
-									<a class="dropdown-item text-dark" href="{{ path('eshop')}}">E-Shop</a>
-								</li>
-								<li>
-									<a class="dropdown-item text-dark" href="{{ path('eshop')}}">Shampooing</a>
-								</li>
-								<li>
-									<a class="dropdown-item text-dark" href="#">Soin hydratant</a>
-								</li>
-								<li>
-									<a class="dropdown-item text-dark" href="#">Coiffant</a>
-								</li>
-								
-							</ul>
-						</li>
+
 					</ul>
 					<form class="d-flex" role="search">
 						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -95,4 +80,4 @@
 					</form>
 				</div>
 			</div>
-		</nav> 
+		</nav> #}

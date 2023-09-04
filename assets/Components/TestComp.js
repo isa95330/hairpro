@@ -125,14 +125,12 @@ function TestComp() {
     onLoad();
   }, [])
   useEffect(() => {
-    slideInTop("#box1");
+    slideInTop("#box1-gsap");
   }, [])
   useEffect(() => {
-    slideInTop("#box2");
+    slideInTop("#box2-gsap");
   }, [])
-  useEffect(() => {
-    slideInLeft("#box3");
-  }, [])
+
 
   
   return (
@@ -146,22 +144,22 @@ function TestComp() {
         
       </h1>
       <section id="nextSection">
-        <div id="box1" className="box">
+        <div id="box1-gsap" className="box-gsap">
           <img src="images/Marie4.jpg" alt="..."></img>
         </div>
        
-        <div id="box3" className="box">
+        <div id="box2-gsap" className="box-gsap">
          <p>La beauté du ciel est dans les étoiles</p>
           <h1>La beauté des femmes est dans leur cheveux</h1> 
         </div>
     
       </section>
 
-      <section id="lastSection">
+      {/* <section id="lastSection">
         <div id="box5" className="box" onMouseEnter={onEnter} onMouseLeave={onLeave}>
          
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

@@ -5,38 +5,52 @@
 
 {% block body %}
 
-<section class="slides">
-	<article class="card">
-		{% for category in categories %}
-			{% if category.parent == null %}
+	<section class="eshop">
+		<h2>Découvrez tous nos produits.</h2>
 
 
-				<input type="radio" name="select" id="slide_1" checked>
-				<input type="checkbox" id="slideImg">
-				<div class="slider">
-					<label for="slide_1" class="slide slide_1"></label>
-				</div>
-				<div class="inner_part">
-					<label for="slideImg" class="img">
-						<img class="img_1" src="images/mariewu3.jpg">
-					</label>
-					
-					<div class="content content_1">
-						<h2 class="title">{{ category.name}}</h2>
-					{% else %}
-						<h3>{{ category.name }}</h3>
-						<div class="text">
-							Istanbul, a fascinating city built on two Continents, divided by the Bosphorus Strait. This is one of the greatest cities in the world.
-						</div>
-						<a href="{{ path('categories_list', {slug: category.slug}) }}" class="btn btn-sm btn-outline-secondary">Voir les produits</a>
-
-					</div>
-				</div>
-
-
+		<article class="eshop-card">
+			<div class="eshop1">
+				<img class="img_1" src="images/prd4.jpg">
 			</div>
-		</div>
-	</article>
+			<div class="text-eshop">
+				<h2 class="title-eshop">Shampooing</h2>
+				<p>
+					Des cheveux sublimes, sans effort. Découvrez les collections de soins.
+											Les soins capillaires d'exception d'un salon Parisien iconique. Découvrez la gamme.
+				</p>
+				</div>
+				{# <a href="{{ path('categories_list')}}" class="btn btn-sm btn-outline-secondary">Voir les produits</a> #}
 
 
-{% endif %}{% endfor %}</section></main>{% endblock %}
+				<article class="eshop-card-2">
+					<div class="eshop1-2">
+						<img class="img_1" src="images/prd4.jpg">
+					</div>
+					<div class="text-eshop-2">
+						<h2 class="title-eshop-2">Shampooing</h2>
+						<p>
+							Des cheveux sublimes, sans effort. Découvrez les collections de soins.
+													Les soins capillaires d'exception d'un salon Parisien iconique. Découvrez la gamme.
+						</p>
+						{# <a href="{{ path('categories_list')}}" class="btn btn-sm btn-outline-secondary">Voir les produits</a> #}
+					</div>
+
+					<article class="eshop-card-3">
+						<div class="eshop1-3">
+							<img class="img_1" src="images/prd4.jpg">
+						</div>
+						<div class="text-eshop-3">
+							<h2 class="title-eshop-3">Shampooing</h2>
+							<p>
+								Des cheveux sublimes, sans effort. Découvrez les collections de soins.
+														Les soins capillaires d'exception d'un salon Parisien iconique. Découvrez la gamme.
+							</p>
+							{# <a href="{{ path('categories_list')}}" class="btn btn-sm btn-outline-secondary">Voir les produits</a> #}
+
+						</div>
+					
+				</article>
+			</section>
+
+		{% endblock %}

@@ -17,7 +17,7 @@ class ProductsController extends AbstractController
             'controller_name' => 'ProductsController',
         ]);
     }
-    #[Route('/{slug}', name: 'details')]
+    #[Route('/{id}', name: 'details')]
     public function details(Products $product): Response
     {
         

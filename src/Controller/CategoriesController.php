@@ -13,7 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 #[Route('/categories', name: 'categories_')]
 class CategoriesController extends AbstractController
 {
-    #[Route('/{slug}', name: 'list')]
+    #[Route('/{id}', name: 'list')]
     public function list(Categories $category, ProductsRepository $productsRepository, Request $request): Response
     {
         //On va chercher le numéro de page dans l'url
