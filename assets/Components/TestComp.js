@@ -71,55 +71,55 @@ function TestComp() {
     })
   }
 
-  const slideInTop = (elem, delay, duration) => {
-    gsap.fromTo(
-      elem,
-      {
-        opacity: 0,
-        y: -200,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        delay: delay || 0.4,
-        duration: duration || 0.6,
-        scrollTrigger: {
-          trigger: elem,
-          start: "top center",
-          end: "bottom center"
-        }
-      }
-    )
-  }
+  // const slideInTop = (elem, delay, duration) => {
+  //   gsap.fromTo(
+  //     elem,
+  //     {
+  //       opacity: 0,
+  //       y: -200,
+  //     },
+  //     {
+  //       opacity: 1,
+  //       y: 0,
+  //       delay: delay || 0.4,
+  //       duration: duration || 0.6,
+  //       scrollTrigger: {
+  //         trigger: elem,
+  //         start: "top center",
+  //         end: "bottom center"
+  //       }
+  //     }
+  //   )
+  // }
 
-  const slideInLeft = (elem, delay, duration) => {
-    gsap.fromTo(
-      elem,
-      {
-        opacity: 0,
-        x: -200,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        delay: delay || 0.4,
-        duration: duration || 0.6,
-        scrollTrigger: {
-          trigger: elem,
-          start: "top center",
-          end: "bottom center"
-        }
-      }
-    )
-  }
+  // const slideInLeft = (elem, delay, duration) => {
+  //   gsap.fromTo(
+  //     elem,
+  //     {
+  //       opacity: 0,
+  //       x: -200,
+  //     },
+  //     {
+  //       opacity: 1,
+  //       x: 0,
+  //       delay: delay || 0.4,
+  //       duration: duration || 0.6,
+  //       scrollTrigger: {
+  //         trigger: elem,
+  //         start: "top center",
+  //         end: "bottom center"
+  //       }
+  //     }
+  //   )
+  // }
 
-  const onEnter = ({ currentTarget }) => {
-    gsap.to(currentTarget, { backgroundColor: "#000", color: "#FFF" })
-  }
+  // const onEnter = ({ currentTarget }) => {
+  //   gsap.to(currentTarget, { backgroundColor: "#000", color: "#FFF" })
+  // }
 
-  const onLeave = ({ currentTarget }) => {
-    gsap.to(currentTarget, { backgroundColor: "#FFF", color: "#000" })
-  }
+  // const onLeave = ({ currentTarget }) => {
+  //   gsap.to(currentTarget, { backgroundColor: "#FFF", color: "#000" })
+  // }
 
   useEffect(() => {
     onLoad();
@@ -127,9 +127,7 @@ function TestComp() {
   useEffect(() => {
     slideInTop("#box1-gsap");
   }, [])
-  useEffect(() => {
-    slideInTop("#box2-gsap");
-  }, [])
+
 
 
   
@@ -148,18 +146,10 @@ function TestComp() {
           <img src="images/Marie4.jpg" alt="..."></img>
         </div>
        
-        <div id="box2-gsap" className="box-gsap">
-         <p>La beauté du ciel est dans les étoiles</p>
-          <h1>La beauté des femmes est dans leur cheveux</h1> 
-        </div>
-    
+   
       </section>
 
-      {/* <section id="lastSection">
-        <div id="box5" className="box" onMouseEnter={onEnter} onMouseLeave={onLeave}>
-         
-        </div>
-      </section> */}
+    
     </div>
   )
 }
