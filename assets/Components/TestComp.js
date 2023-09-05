@@ -1,7 +1,7 @@
 import React from 'react';
 
 import'../css/app.css';
-import'./public/assets/css/styles.css';
+//import'./public/assets/css/styles.css';
 import { useEffect, useRef } from 'react';
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"

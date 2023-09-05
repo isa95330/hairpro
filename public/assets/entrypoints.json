@@ -1,0 +1,14 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/public/runtime.js",
+        "/public/vendors-node_modules_gsap_ScrollToPlugin_js-node_modules_gsap_ScrollTrigger_js-node_modules_g-6a8535.js",
+        "/public/app.js"
+      ],
+      "css": [
+        "/public/app.css"
+      ]
+    }
+  }
+}

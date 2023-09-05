@@ -58,7 +58,7 @@ class OrdersController extends AbstractController
 
         $this->addFlash('message', 'Commande créée avec succès');
         
-        // return $this->redirectToRoute('orders/orders.html.twig');
+        return $this->redirectToRoute('orders/orders.html.twig');
     }
   
     
