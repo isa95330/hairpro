@@ -39,6 +39,7 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  background-color:rgba(255, 255, 255, 0.4)
 }
 .header::before {
   content: "";
@@ -47,37 +48,27 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(5, 5, 5);
+  background-color: transparent;
   z-index: -1;
 }
 .header::after {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
+  /* left: -100%; */
   width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgb(255, 255, 255, 0.4),
-    tranparent
-  );
+  height: 10%;
+
+
   transition: 0.5s;
 }
 .header:hover::after {
   left: 100%;
 }
 
-.logo {
-  font-size: 2rem;
-  color: antiquewhite;
-  text-decoration: none;
-  font-weight: 700;
-}
 .navbar a {
   font-size: 1.15rem;
-  color: antiquewhite;
+  color: rgb(5, 5, 4);
   text-decoration: none;
   font-weight: 500;
   margin-left: 2.5rem;
@@ -89,7 +80,7 @@ body {
   position: absolute;
   right: 5%;
   font-size: 2.8rem;
-  color: antiquewhite;
+  color: rgb(5, 5, 4);
   cursor: pointer;
   display: none;
 }
@@ -105,26 +96,35 @@ body {
   #check:checked ~ .icons #menu-icon {
     display: none;
   }
-  .icons #close-icon {
+  .icons #menu-icon~ .icons #close-icon {
     display: none;
   }
-
-  #check:checked ~ .icons #close-icon {
-    display: block;
+  .icons #close-icon~ .icons #menu-icon {
+    display: none;
   }
+ #check:checked ~ .icons #close-icon {
+    display: block;
+  }  
   .navbar {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    height: 17.7rem;
-    background-color: rgb(5, 5, 5);
+    height: 14rem;
+    background-color:rgba(255, 255, 255, 0.4);
+    
+    background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(255, 255, 255, 0.4),
+    tranparent
+  );
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
     overflow: hidden;
     transition: 0.3s ease;
   }
   #check:checked ~ .navbar {
-    height: 17.7rem;
+    height: 14rem;
   }
   .navbar a {
     display: block;
@@ -164,12 +164,52 @@ body {
 .prestations2 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 4rem;
+  grid-auto-rows: auto;
   text-align: center;
-  display: flex;
+
   padding: 1rem;
   gap: 2rem;
 }
+.grid2 .box7{
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.grid2 .box8{
+  grid-column: 1/2;
+  grid-row: 2/3;
+} 
+.grid2 .box9{
+  grid-column: 1/2;
+  grid-row: 3/4;
+} 
+.grid2 .box10{
+  grid-column: 1/2;
+  grid-row: 4/5;
+} 
+.grid2 .bo11{
+  grid-column: 1/2;
+  grid-row: 5/6;
+} 
+.grid2 .box12{
+  grid-column: 1/2;
+  grid-row: 6/7;
+} 
+.grid2 .box13{
+  grid-column: 1/2;
+  grid-row: 7/8;
+} 
+.grid2 .box14{
+  grid-column: 1/2;
+  grid-row: 8/9;
+} 
+.grid2 .box15{
+  grid-column: 1/2;
+  grid-row: 9/10;
+} 
+.grid2 .box16{
+  grid-column: 1/2;
+  grid-row: 10/11;
+} 
 .grid2 {
   text-align: center;
   border: solid 1px #000;
@@ -730,6 +770,7 @@ input {
     opacity: 0;
   }
 }
+@media screen and (min-width: 48em) {
 /* -----------------------------slider----------------------------- */
 .slideshow {
   list-style-type: none;
@@ -950,3 +991,96 @@ input {
   background-image: url("../../images/bitie3.jpg");
   animation-delay: 11s;
 }
+}
+.slideshow li:nth-child(1) {
+  background-image: url("../../images/kimberley1.jpg");
+}
+.slideshow li:nth-child(2) {
+  background-image: url("../../images/Kimberley2.jpg");
+  animation-delay: 3s;
+}
+.slideshow li:nth-child(3) {
+  background-image: url("../../images/Kimberley3.jpg");
+  animation-delay: 5s;
+}
+.slideshow li:nth-child(4) {
+  background-image: url("../../images/Kimberley4.jpeg");
+  animation-delay: 8s;
+}
+.slideshow li:nth-child(5) {
+  background-image: url("../../images/Kimberley2.jpg");
+  animation-delay: 8s;
+}
+.slideshow3 li:nth-child(1) {
+  background-image: url("../../images/bitie1.jpg");
+}
+.slideshow3 li:nth-child(2) {
+  background-image: url("../../images/bitie2.jpg");
+  animation-delay: 3s;
+}
+.slideshow3 li:nth-child(3) {
+  background-image: url("../../images/bitie3.jpg");
+  animation-delay: 5s;
+}
+.slideshow3 li:nth-child(4) {
+  background-image: url("../../images/bitie1.jpg");
+  animation-delay: 8s;
+}
+.slideshow3 li:nth-child(5) {
+  background-image: url("../../images/bitie3.jpg");
+  animation-delay: 11s;
+}
+.slideshow2 li:nth-child(1) {
+  background-image: url("../../images/sophie1.jpg");
+}
+.slideshow2 li:nth-child(2) {
+  background-image: url("../../images/sophie2.jpg");
+  animation-delay: 3s;
+}
+.slideshow2 li:nth-child(3) {
+  background-image: url("../../images/sophie3.jpg");
+  animation-delay: 5s;
+}
+.slideshow2 li:nth-child(4) {
+  background-image: url("../../images/sophie2.jpeg");
+  animation-delay: 8s;
+}
+.slideshow2 li:nth-child(5) {
+  background-image: url("../../images/sophie3.jpg");
+  animation-delay: 9ss;
+}
+.a{
+  display: none;
+}
+@media screen and (max-width: 48em) {
+  body{
+    padding:1rem;
+  }
+  ul{
+    display: none;
+  }
+  .box16{
+    background-image: url("../../images/sophie3.jpg");
+    height:30rem;
+    background-size: cover;
+    background-position: center;
+    padding:2rem;
+  }
+  .box11{
+    background-image: url("../../images/bitie1.jpg");
+    height:40rem;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    margin-top: 5rem;
+  }
+  .box14{
+    background-image: url("../../images/Kimberley3.jpg");
+    height:20rem;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+  }
+  
+}
+

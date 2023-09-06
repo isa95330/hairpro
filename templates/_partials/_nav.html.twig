@@ -12,27 +12,31 @@
 </head>
 <body>
 <header class="header">
-  <a href="#" class="logo">logo</a>
+  <a href="#"class="logo">SP</a>
 <input type="checkbox" id="check">
   <label for="check" class="icons">
     <i class="bx bx-menu" id="menu-icon"></i>
-    <i class="bx bx-x"></i>
+    <i class="bx bx-x" id="close-icon"></i>
   </label>
 
-  <nav class="navbar">
+<nav class="navbar">
     <a href="{{ path('main')}}" style="--i:0">Accueil</a>
-    <a href="#" style="--i:1">Porfolio</a>
-    <a href="#" style="--i:2">Publication</a>
+   
     <a href="{{ path('eshop')}}" style="--i:3">La boutique</a>
     <a href="{{ path('app_register')}}" style="--i:4">Créer un compte</a>
 	{% if app.user %}
     <a href="{{ path('app_login')}}" style="--i:5">Connexion</a>
+        <div class="mb-3">
+            <span style="color:#fff;display: block;margin-bottom: -4px;">Vous êtes connecté(e){{ app.user.userIdentifier }}</span>
+			<a href="{{ path('app_logout') }}">Me déconnecter</a>
+			{% if app.user.roles[0] == 'ROLE_ADMIN' %}
+			<a href="{{ path('admin_index') }}">Admin</a>
+			{% endif %}
+        </div>
 	{% else %}
     <a href="{{ path('app_logout')}}" style="--i:6">Déconnexion</a>
+	<a href="{{ path('app_login')}}" style="--i:5">Connexion</a>
 	{% endif %}
-    
-
-  </nav>
 </header>
  </body>
 </html>

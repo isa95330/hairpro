@@ -14,12 +14,12 @@
 	<li><span></span></li>
 </ul>
 </section>
-{% for category in categories %}
-                {% if category.parent == null %}
+
+              
 <section class="eshop">
-  <h2>{{ category.name }}</h2>
+
 		<h2>Découvrez tous nos produits.</h2>
-		   <h2>{{ category.name }}</h2>
+	
 
 		<article class="eshop-card">
 			<div class="eshop1">
@@ -61,14 +61,12 @@
 								Des cheveux sublimes, sans effort. Découvrez les collections de soins.
 														Les soins capillaires d'exception d'un salon Parisien iconique. Découvrez la gamme.
 							</p>
-							                                <a href="{{ path('categories_list', {id: category.id}) }}" class="btn btn-primary">Voir les produits</a>
+							<a href="{{ path('categories_list', {'id': 108})}}" class="btn btn-sm btn-outline-secondary">Voir les produits</a>
 							{# <a href="{{ path('categories_list')}}" class="btn btn-sm btn-outline-secondary">Voir les produits</a> #}
 
 						</div>
 					</div>
-					
-		      {% endif %}
-            {% endfor %}
+			
 				</article>
 			</section>
 {% endblock %}
