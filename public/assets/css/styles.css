@@ -24,11 +24,18 @@ p {
   margin-bottom: 1.5em;
   color: #898989;
 }
+.logo{
+  height:5rem;
+}
 /* ---------------------------NAVBAR------------------------------- */
 
 body {
   min-height: 100vh;
 }
+
+
+
+
 .header {
   position: fixed;
   top: 0;

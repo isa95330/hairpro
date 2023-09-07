@@ -11,8 +11,9 @@
 
 </head>
 <body>
+
 <header class="header">
-  <a href="#" class="logo">logo</a>
+  <img src="images/logo.jpg" width="80rem" class="logo"></img>
 <input type="checkbox" id="check">
   <label for="check" class="icons">
     <i class="bx bx-menu" id="menu-icon"></i>
@@ -21,8 +22,6 @@
 
   <nav class="navbar">
     <a href="{{ path('main')}}" style="--i:0">Accueil</a>
-    {# <a href="#" style="--i:1">Porfolio</a> #}
-    {# <a href="#" style="--i:2">Publication</a> #}
     <a href="{{ path('eshop')}}" style="--i:3">La boutique</a>
     <a href="{{ path('app_register')}}" style="--i:4">Créer un compte</a>
 	{% if app.user %}
@@ -42,61 +41,4 @@
 </header>
  </body>
 </html>
-{# <nav class="navbar navbar-expand-md fixed-top navbar-dark text-bs-dark mb-5" id="nav" aria-label="Main navigation">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="#">Logo</a>
-		<button class="navbar-toggler p-0 border-0 " type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon "></span>
-		</button>
 
-		<div class="navbar-collapse margin-top: -10rem;" id="navbarsExampleDefault">
-			<a class="navbar-nav me-auto mb-5 mb-lg-0 ">
-
-				<li class="nav-item ">
-					<a class="nav-link active text-dark" aria-current="page" href="{{ path('main')}}">Accueil</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-dark" href="#">Presse</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-dark" href="">Portfolio</a>
-				</li>
-
-				<li class="nav-item">
-					<a class="nav-link text-dark" href="{{ path('app_register')}}">Créer mon compte</a>
-				</li>
-				{% if app.user %}
-					<li class="nav-item">
-						<a class="nav-link text-dark" href="{{ path('app_logout')}}">Déconnexion</a>
-					</li>
-				{% else %}
-					<li class="nav-item">
-						<a class="nav-link text-dark" href="{{ path('app_login')}}">Connexion</a>
-					</li>
-				{% endif %}
-				<a class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">La boutique</a>
-					<ul class="dropdown-menu">
-						<li>
-							<a class="dropdown-item text-dark" href="{{ path('eshop')}}">E-Shop</a>
-						</li>
-
-
-						<li>
-							<a class="dropdown-item text-dark" href="#">Shampoing</a>
-						</li>
-						<li>
-							<a class="dropdown-item text-dark" href="#">Soin hydratant</a>
-						</li>
-						<li>
-							<a class="dropdown-item text-dark" href="#">Coiffant</a>
-						</li>
-
-					</ul>
-					<form class="d-flex" role="search">
-						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-success" type="submit">Rechercher</button>
-					</form>
-				</div>
-			</div>
-		</nav> #}
