@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,600;1,700&family=Roboto:ital,wght@0,300;0,900;1,300&display=swap");
 
+
+
 body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -24,6 +26,7 @@ p {
   margin-bottom: 1.5em;
   color: #898989;
 }
+
 /* ---------------------------NAVBAR------------------------------- */
 
 body {
@@ -171,6 +174,12 @@ body {
   padding: 1rem;
   gap: 2rem;
 }
+.box8 li{
+  list-style-type: none;
+}
+.box9 li{
+  list-style-type: none;
+}
 .grid2 .box7{
   grid-column: 1/2;
   grid-row: 1/2;
@@ -230,6 +239,9 @@ body {
   margin: 1rem;
   font-size: 2rem;
   color: grey;
+}
+.presse h2{
+  margin-right: 10rem;
 }
 .grid2 h2 {
   font-family: "roboto" sans-serif;
@@ -720,22 +732,22 @@ input {
 }
 
 .slideshow-eshop li:nth-child(1) span {
-  background-image: url("../uploads/prd1-min-64f5ce074c1ea.jpg");
+  background-image: url("../../imagesprd4.jpg");
 }
 .slideshow-eshop li:nth-child(2) span {
-  background-image: url("../uploads/prd3-min-64f5cccc80c49.jpg");
+  background-image: url("../../images/prd5.jpg");
   animation-delay: 6s;
 }
 .slideshow-eshop li:nth-child(3) span {
-  background-image: url("../uploads/prd4-min-64f5909905693.jpg");
+  background-image: url("../../images/prd4.jpg");
   animation-delay: 12s;
 }
 .slideshow-eshop li:nth-child(4) span {
-  background-image: url("../uploads/prd5mini-64f0a208cfe2f.jpg");
+  background-image: url("../../images/prd5.jpg");
   animation-delay: 18s;
 }
 .slideshow-eshop li:nth-child(5) span {
-  background-image: url("../uploads/prd7-min-64f5911c8de4e.jpg");
+  background-image: url("../../images/prd4.jpg");
   animation-delay: 24s;
 }
 

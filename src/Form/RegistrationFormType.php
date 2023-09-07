@@ -55,15 +55,15 @@ class RegistrationFormType extends AbstractType
                 ],
                 'label' => 'Ville'
             ])
-            ->add('RGPDConsent', CheckboxType::class, [
-                'mapped' => false,
-                'constraints' => [
-                    new IsTrue([
-                        'message' => 'You should agree to our terms.',
-                    ]),
-                ],
-                'label' => 'En m\inscrivant à ce site ,j\accepte les conditions d\utilisations'
-            ])
+            // ->add('RGPDConsent', CheckboxType::class, [
+            //     'mapped' => false,
+            //     'constraints' => [
+            //         new IsTrue([
+            //             'message' => 'You should agree to our terms.',
+            //         ]),
+            //     ],
+            //     'label' => 'En m\inscrivant à ce site ,j\accepte les conditions d\utilisations'
+            // ])
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
