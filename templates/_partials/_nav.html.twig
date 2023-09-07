@@ -26,8 +26,9 @@
     <a href="{{ path('eshop')}}" style="--i:3">La boutique</a>
     <a href="{{ path('app_register')}}" style="--i:4">Créer un compte</a>
 	{% if app.user %}
+	{# {{ dump(app.user) }} #}
         <div class="mb-3">
-            <span style="color:#fff;display: block;margin-bottom: -4px;">Vous êtes connecté(e){{ app.user.userIdentifier }}</span>
+            <span style="color:#00000;display: block;margin-bottom: -4px;">Vous êtes connecté(e), {{ app.user.firstname }} {{ app.user.lastname }}</span>
 			<a href="{{ path('app_logout') }}">Me déconnecter</a>
 			{% if app.user.roles[0] == 'ROLE_ADMIN' %}
 			<a href="{{ path('admin_index') }}">Admin</a>
